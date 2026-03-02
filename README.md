@@ -2,22 +2,22 @@
 # 🎫 Système de Gestion de Demandes (Ticketing)
 (Développement Fullstack : React.js & API Node.js/Express)
 
-Ce projet est une plateforme complète permettant de créer, suivre et gérer des tickets d'assistance. Il repose sur une architecture découplée avec un **Frontend en React** et un **Backend (API REST)** communiquant avec une base de données SQL.
+Ce projet est une plateforme  permettant de créer, suivre et gérer des tickets d'assistance. Il repose sur une architecture découplée avec un **Frontend en React** et un **Backend (API REST)** communiquant avec une base de données SQL.
 
 ---
 
 ## 🚀 Installation & Configuration
 
 ### 1. Configuration de la Base de Données
-La base de données n'est pas incluse dans le dépôt pour des raisons de sécurité et de légèreté. Vous devez la créer localement en exécutant les commandes suivantes dans votre client SQL (MySQL Workbench, phpMyAdmin, etc.) :
+La base de données n'est pas incluse dans le dépôt pour des raisons de sécurité et de légèreté. Vous devez la créer localement en exécutant les commandes suivantes dans votre client SQL (pgAdmin, utilisation de PostgreSQL) :
 
 ```sql
 -- Création de la base de données
-CREATE DATABASE IF NOT EXISTS ticketing_db;
+CREATE DATABASE IF NOT EXISTS demandesDB;
 USE ticketing_db;
 
 -- Création de la table des tickets
-CREATE TABLE IF NOT EXISTS tickets (
+CREATE TABLE IF NOT EXISTS deamndes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titre VARCHAR(255) NOT NULL,
     description TEXT,
@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS tickets (
     date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
-
+ Note: après la creation de votre base de données modifié le fichier index.js du dossier backend.
+ 
 ---
 ## 2. Lancement du Backend (API)
 Bash
