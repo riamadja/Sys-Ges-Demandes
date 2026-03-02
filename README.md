@@ -24,8 +24,10 @@ CREATE TABLE IF NOT EXISTS tickets (
     statut ENUM('En attente', 'En cours', 'Terminé') DEFAULT 'En attente',
     date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
-2. Lancement du Backend (API)
+---
+## 2. Lancement du Backend (API)
 Bash
 
 cd backend
@@ -33,16 +35,19 @@ npm install
 # Assurez-vous de configurer vos accès DB dans le fichier de configuration
 npm start
 
-3. Lancement du Frontend (React)
+---
+## 3. Lancement du Frontend (React)
 Bash
 
 cd frontend
 npm install
 npm start
 
-🏗️ Structure du Projet
-Plaintext
+---
 
+## 4.Structure du Projet
+
+```text
 système-gestion-demandes/
 ├── frontend/                # Application React (Interface Utilisateur)
 │   ├── src/
@@ -54,18 +59,12 @@ système-gestion-demandes/
 │   ├── routes/              # Définition des points d'entrée API (Endpoints)
 │   └── server.js            # Initialisation du serveur
 └── README.md                # Documentation du projet
+```
 
-🛠️ Fonctionnalités Clés
+---
 
-    Gestion des Tickets : Création, consultation, mise à jour du statut et suppression (CRUD complet).
 
-    Interface Réactive : Mise à jour en temps réel de l'affichage sans recharger la page grâce à React.
-
-    API REST : Communication standardisée entre le client et le serveur.
-
-    Architecture Modulaire : Code organisé par composants pour une maintenance facilitée.
-
-🛑 Arrêt et Nettoyage
+## 5.Arrêt et Nettoyage
 
 Pour fermer l'environnement de test proprement :
 
@@ -76,6 +75,8 @@ Pour fermer l'environnement de test proprement :
 
     # À exécuter dans les dossiers frontend et backend
     rm -rf node_modules
+
+---
 
 #  Prérequis
 
